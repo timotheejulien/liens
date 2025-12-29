@@ -165,7 +165,7 @@ header h1 {
    display: flex;
    flex-direction: column;
    justify-content: flex-end;
-   padding: 2rem;
+   padding: var(--space-regular);
    text-decoration: none;
    color: inherit;
    overflow: hidden;
@@ -184,13 +184,13 @@ header h1 {
 
 .card h2 {
    font-family: var(--font-display);
-   font-size: 1.8rem;
+   font-size: 24px;
    font-weight: 400;
    color: var(--color-text-secondary);
 }
 
 .card p {
-   font-size: 1.8rem;
+   font-size: 24px;
    color: var(--color-text-primary);
 }
 
@@ -229,8 +229,7 @@ footer {
 }
 
 footer p {
-   font-size: 0.85rem;
-   color: var(--color-text-soft);
+   color: var(--color-text-secondary);
 }
 
 /* Animations */
@@ -271,12 +270,12 @@ header {
    }
     
    header {
-      margin-bottom: 3rem;
+      margin-bottom: var(--space-x-large)
    }
     
    .grid {
       grid-template-columns: 1fr;
-      gap: 1rem;
+      gap: var(--space-regular);
    }
     
    .card-large,
@@ -287,25 +286,25 @@ header {
    }
     
    .card {
-      padding: 1.5rem;
+      padding: var(--space-regular);
    }
    
    .card h2 {
-      font-size: 1.5rem;
+      font-size: 24px;
    }
    
-   .card-portfolio h2 {
-      font-size: 2rem;
+   .card p {
+      font-size: 24px;
    }
 }
 
 @media (max-width: 480px) {
    header h1 {
-      font-size: 2rem;
+      font-size: 36px;
    }
    
    .subtitle {
-      font-size: 0.8rem;
+      font-size: 18px;
    }
    
    .card {
@@ -330,23 +329,5 @@ header {
       --color-text-third: #DEDEDE;
       --color-focus: #FBFBFB;
       --color-primary: #FFD363;
-   }
-
-   img {
-      filter: brightness(.8) contrast(1.2);
-   }
-
-   header {
-      background: rgba(32, 32, 32, 0.85);
-      backdrop-filter: blur(10px) saturate(120%);
-      -webkit-backdrop-filter: blur(10px) saturate(120%);
-   }
-
-   #search-container {
-      background: var(--color-background-elevated);
-   }
-
-   #search-input {
-      background: var(--color-background);
    }
 }
