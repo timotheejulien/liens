@@ -114,6 +114,7 @@ a:hover {
 }
 
 body {
+   min-height: 100vh;
    position: relative;
    margin: 0;
    padding: 0;
@@ -201,35 +202,34 @@ header h1 {
    color: var(--color-text-primary);
 }
 
-.card-github svg, .card-blog svg {
+.card-portfolio svg, .card-github svg, .card-blog svg {
    fill: var(--color-text-primary);
 }
 
 /* Card Variations */
 .card-large {
    grid-column: span 2;
-   min-height: 300px;
+   min-height: 200px;
 }
 
 .card-tall {
    grid-row: span 2;
-   min-height: 420px;
+   min-height: 200px;
 }
 
 
 /* Footer */
 footer {
-   text-align: center;
-   margin-top: 4rem;
-   padding-top: 2rem;
-   border-top: 1px solid var(--color-border);
-   max-width: 1200px;
-   margin-left: auto;
-   margin-right: auto;
+   margin-top: var(--space-x-large);
+   padding: var(--space-medium);
+   color: var(--color-text-secondary);
+   border: 1px solid var(--color-divider);
 }
 
-footer p {
-   color: var(--color-text-secondary);
+.footer-credit {
+   margin-top: var(--space-regular);
+   padding-top: var(--space-regular);
+   border-top: 1px solid var(--color-divider);
 }
 
 /* Animations */
@@ -263,11 +263,38 @@ header {
 .card:nth-child(9) { animation-delay: 0.45s; }
 .card:nth-child(10) { animation-delay: 0.5s; }
 
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+   :root {
+      /* COLOR TOKEN */
+      --color-background: #202020;
+      --color-background-elevated: #343434;
+      --color-button-background-primary: #FBFBFB;
+      --color-button-background-primary-hover: #DEDEDE;
+      --color-button-text-primary: #343434;
+      --color-button-background-secondary: #DEDEDE;
+      --color-button-text-secondary: #202020;
+      --color-divider: #414141;
+      --color-text-primary: #FBFBFB;
+      --color-text-secondary: #BABABA;
+      --color-text-third: #DEDEDE;
+      --color-focus: #FBFBFB;
+      --color-primary: #FFD363;
+   }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
    body {
       padding: 0;
    }
+
+   .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: var(--space-regular);
     
    header {
       margin-bottom: var(--space-x-large)
@@ -309,25 +336,5 @@ header {
    
    .card {
       min-height: 160px;
-   }
-}
-
-/* DARK MODE */
-@media (prefers-color-scheme: dark) {
-   :root {
-      /* COLOR TOKEN */
-      --color-background: #202020;
-      --color-background-elevated: #343434;
-      --color-button-background-primary: #FBFBFB;
-      --color-button-background-primary-hover: #DEDEDE;
-      --color-button-text-primary: #343434;
-      --color-button-background-secondary: #DEDEDE;
-      --color-button-text-secondary: #202020;
-      --color-divider: #343434;
-      --color-text-primary: #FBFBFB;
-      --color-text-secondary: #BABABA;
-      --color-text-third: #DEDEDE;
-      --color-focus: #FBFBFB;
-      --color-primary: #FFD363;
    }
 }
